@@ -2,11 +2,20 @@
 
 A live, teacher-hosted Wordle-style game for classroom spelling practice and tests. The teacher sets the word(s); students join from their own device and guess Wordle-style, with real-time color feedback so the teacher can see mistakes as they happen.
 
-## Requirements
+## Quick Start
 
-- [Node.js](https://nodejs.org/) (LTS version). This installs both `node` and `npm`.
+**1. Requirements** — [Node.js](https://nodejs.org/) (LTS version). This installs both `node` and `npm`. If you're not sure whether you have it, open a terminal and run `node -v` — if that prints a version number, you're set.
 
-## Setup
+**2. Get the code**
+
+```
+git clone https://github.com/falyssa/Teachers-Wordle.git
+cd Teachers-Wordle
+```
+
+(Or just download the ZIP from GitHub and unzip it, if you don't use git.)
+
+**3. Install and run**
 
 ```
 npm install
@@ -21,8 +30,10 @@ Teacher's Wordle running:
   Network: http://192.168.x.x:3000  (share this with students on the same WiFi)
 ```
 
-- On the **teacher's computer**, open the `Local` URL and click "I'm a Teacher". A 4-letter room code will appear.
-- On **student devices** (same WiFi network as the teacher's computer), open the `Network` URL, click "I'm a Student", enter a name and the room code.
+**4. Open it in your browser**
+
+- On the **teacher's computer**, open the `Local` URL and click "Teacher". A 4-letter room code will appear — that's what your class will use to join.
+- On **student devices** (same WiFi network as the teacher's computer), open the `Network` URL, click "Student", enter a name and the room code, and you're in.
 
 ## Using it
 
@@ -37,7 +48,7 @@ Teacher's Wordle running:
 - `server/wordle.js` — the actual Wordle scoring algorithm (green/yellow/gray). Scoring happens server-side only, so the secret word is never shipped to student browsers.
 - `public/` — plain HTML/CSS/JS frontend (ES modules, no build step). `public/js/grid.js` is the shared Wordle grid + on-screen keyboard used by both the teacher and student pages.
 
-## Roadmap (not in v1)
+## Future Work (Ideas/Updates)
 
 - Teacher accounts and persistent classrooms (students join a standing class, not just a one-off room code)
 - Saved word lists / past test results (currently everything is in-memory and lost on server restart)
