@@ -2,6 +2,12 @@
 
 A live, teacher-hosted Wordle-style game for classroom spelling practice and tests. The teacher sets the word(s); students join from their own device and guess Wordle-style, with real-time color feedback so the teacher can see mistakes as they happen.
 
+## Live Demo
+
+**[falyssas-teachers-wordle.onrender.com](https://falyssas-teachers-wordle.onrender.com/)**
+
+Hosted on Render's free tier, so if nobody's used it in a while, the first load can take up to a minute to spin back up — just give it a moment. It'll be instant for everyone else after that.
+
 ## Quick Start
 
 **1. Requirements** — [Node.js](https://nodejs.org/) (LTS version). This installs both `node` and `npm`. If you're not sure whether you have it, open a terminal and run `node -v` — if that prints a version number, you're set.
@@ -52,5 +58,4 @@ Teacher's Wordle running:
 
 - Teacher accounts and persistent classrooms (students join a standing class, not just a one-off room code)
 - Saved word lists / past test results (currently everything is in-memory and lost on server restart)
-- Cloud hosting so students can join over the internet instead of local WiFi only
 - Optional text-to-speech word playback for test mode, as an alternative to the teacher speaking aloud
