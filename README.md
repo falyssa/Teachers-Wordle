@@ -38,6 +38,8 @@ Teacher's Wordle running:
 
 **4. Open it in your browser**
 
+> This "same WiFi" requirement only applies when you're self-hosting locally like this. If you're using the [live demo](#live-demo) instead, students can join from anywhere with internet — no shared network needed.
+
 - On the **teacher's computer**, open the `Local` URL and click "Teacher". A 4-letter room code will appear — that's what your class will use to join.
 - On **student devices** (same WiFi network as the teacher's computer), open the `Network` URL, click "Student", enter a name and the room code, and you're in.
 

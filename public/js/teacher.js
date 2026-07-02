@@ -16,6 +16,24 @@ const difficultyCard = document.getElementById('difficulty-card');
 const difficultyBody = document.getElementById('difficulty-body');
 const rosterList = document.getElementById('roster-list');
 const studentCount = document.getElementById('student-count');
+const lanHint = document.getElementById('lan-hint');
+
+// The "same WiFi" instruction only makes sense when this page is being
+// self-hosted on a local machine/network — on a real public deployment
+// (like Render), students can join from anywhere with internet.
+function isLocalDeployment() {
+  const h = location.hostname;
+  return (
+    h === 'localhost' ||
+    h === '127.0.0.1' ||
+    /^192\.168\.\d{1,3}\.\d{1,3}$/.test(h) ||
+    /^10\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(h) ||
+    /^172\.(1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3}$/.test(h)
+  );
+}
+lanHint.textContent = isLocalDeployment()
+  ? 'Students on the same WiFi should open this app and enter the code above.'
+  : 'Share this link with your students — they can join from anywhere. Just give them the room code above.';
 
 let latestRoster = [];
 let latestMode = 'idle';
