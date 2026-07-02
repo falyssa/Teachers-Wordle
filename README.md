@@ -1,6 +1,6 @@
 # Teacher's Wordle
 
-A live, teacher-hosted Wordle-style game for classroom spelling practice and tests. The teacher sets the word(s); students join from their own device and guess Wordle-style, with real-time color feedback so the teacher can see mistakes as they happen.
+A live, teacher-hosted Wordle-style game for classroom spelling practice and tests. The teacher sets the word(s); students join from their own device and guess Wordle-style, with real-time color feedback so the teacher can see mistakes as they happen and students can try to work out the spelling through gameplay!
 
 ## Live Demo
 
