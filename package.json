@@ -1,0 +1,13 @@
+{
+  "name": "teaching-wordle",
+  "version": "1.0.0",
+  "description": "Live, teacher-hosted Wordle-style spelling practice and tests for a classroom.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}

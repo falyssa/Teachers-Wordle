@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher's Wordle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Irish+Grover&family=Ancizar+Serif&family=Jersey+20&family=jsMath+cmti10&family=Kaushan+Script&family=Lexend+Mega&family=Doto:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="hero-page">
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <filter id="sketchy" x="-30%" y="-30%" width="160%" height="160%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="sketchy-fine" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="4" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="hero">
+    <div class="cloud-layer cloud-a">
+      <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12,68 C0,54 10,34 28,37 C26,16 60,7 76,26 C87,10 122,14 125,34 C148,23 174,40 163,59 C184,63 180,84 158,82 L32,82 C10,85 4,76 12,68 Z"
+          fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#sketchy)" />
+      </svg>
+    </div>
+    <div class="cloud-layer cloud-b">
+      <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12,68 C0,54 10,34 28,37 C26,16 60,7 76,26 C87,10 122,14 125,34 C148,23 174,40 163,59 C184,63 180,84 158,82 L32,82 C10,85 4,76 12,68 Z"
+          fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#sketchy)" />
+      </svg>
+    </div>
+
+    <h1 class="site-title">
+      <span class="serif-word">Teacher's</span>
+      <span class="funky-word" aria-label="Wordle" role="button" tabindex="0">
+        <span class="fw-w" aria-hidden="true"><span class="letter-inner">W</span></span>
+        <span class="fw-o" aria-hidden="true"><span class="letter-inner">o</span></span>
+        <span class="fw-r" aria-hidden="true"><span class="letter-inner">r</span></span>
+        <span class="fw-d" aria-hidden="true"><span class="letter-inner">d</span></span>
+        <span class="fw-l" aria-hidden="true"><span class="letter-inner">l</span></span>
+        <span class="fw-e" aria-hidden="true"><span class="letter-inner">e</span></span>
+      </span>
+    </h1>
+
+    <div class="hero-buttons-row">
+      <div class="doodle-decoration clipboard">
+        <div class="doodle-shake-inner">
+          <svg viewBox="0 0 160 230" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#sketchy)">
+              <!-- cardboard backing -->
+              <path d="M14,40 C11,37 13,33 18,33 L140,28 C146,27 150,32 148,37 L156,212 C157,219 152,223 146,224 L20,229 C14,230 10,225 12,219 Z"
+                fill="#c39764" stroke="#2a2118" stroke-width="3" />
+              <path d="M14,40 C11,37 13,33 18,33 L140,28 C146,27 150,32 148,37 L156,212 C157,219 152,223 146,224 L20,229 C14,230 10,225 12,219 Z"
+                fill="none" stroke="#2a2118" stroke-width="1.4" opacity="0.4" transform="translate(3,-2) rotate(0.8 80 120)" />
+              <!-- metal clip -->
+              <path d="M54,14 C51,11 54,8 59,8 L103,6 C108,5 111,9 110,14 L113,38 C114,43 110,46 105,46 L56,47 C51,48 49,43 51,39 Z"
+                fill="#d6d9dc" stroke="#2a2118" stroke-width="3" />
+              <path d="M60,16 L104,12" stroke="#ffffff" stroke-width="2" opacity="0.6" stroke-linecap="round" />
+              <!-- paper, inset so the cardboard shows around the edges -->
+              <path d="M28,58 C26,56 28,54 31,54 L132,50 C136,50 138,53 137,56 L143,204 C144,209 141,212 137,213 L34,217 C30,218 27,214 29,210 Z"
+                fill="#fbf8f0" stroke="#2a2118" stroke-width="2.5" />
+              <!-- scribbled handwriting, each line centered on the paper's midline (~x85) -->
+              <path d="M45,76 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0"
+                fill="none" stroke="#2a2118" stroke-width="1.6" opacity="0.75" stroke-linecap="round" />
+              <path d="M57,97 q4,-6 8,0 q4,6 8,0 q4,-6 8,0 q4,6 8,0 q4,-6 8,0 q4,6 8,0 q4,-6 8,0"
+                fill="none" stroke="#2a2118" stroke-width="1.6" opacity="0.65" stroke-linecap="round" />
+              <path d="M49,118 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0 q4,-7 8,0"
+                fill="none" stroke="#2a2118" stroke-width="1.6" opacity="0.75" stroke-linecap="round" />
+              <path d="M65,139 q4,-6 8,0 q4,6 8,0 q4,-6 8,0 q4,6 8,0 q4,-6 8,0"
+                fill="none" stroke="#2a2118" stroke-width="1.6" opacity="0.6" stroke-linecap="round" />
+              <path d="M57,160 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0 q4,-7 8,0 q4,7 8,0 q4,-7 8,0"
+                fill="none" stroke="#2a2118" stroke-width="1.6" opacity="0.7" stroke-linecap="round" />
+              <path d="M51,188 q10,-16 20,0 q10,16 20,0 q8,-12 16,0 q6,9 12,-2"
+                fill="none" stroke="#2a2118" stroke-width="1.8" opacity="0.7" stroke-linecap="round" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="landing-choices">
+        <a class="btn btn-teacher" href="teacher.html">Teacher</a>
+        <a class="btn btn-student" href="student.html">Student</a>
+      </div>
+
+      <div class="doodle-decoration pencil">
+        <div class="doodle-shake-inner">
+          <svg viewBox="0 0 110 380" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(11deg);">
+            <g filter="url(#sketchy)">
+              <path d="M30,10 C28,8 31,6 35,6 L66,7 C70,7 73,10 72,14 L71,40 C71,44 68,47 64,47 L33,46 C29,46 27,43 28,39 Z"
+                fill="#f4a8c6" stroke="#241f1a" stroke-width="3" />
+              <path d="M29,44 C28,43 30,42 33,42 L69,43 C72,43 74,45 73,47 L72,66 C72,68 70,69 68,69 L32,68 C30,68 28,67 28,65 Z"
+                fill="#dcdcdc" stroke="#241f1a" stroke-width="3" />
+              <path d="M33,53 q18,3 36,0" stroke="#241f1a" stroke-width="1.2" opacity="0.5" fill="none" />
+              <path d="M33,60 q18,3 36,0" stroke="#241f1a" stroke-width="1.2" opacity="0.5" fill="none" />
+              <path d="M28,66 C27,66 29,65 31,65 L70,66 C73,66 74,68 74,70 L68,338 C68,340 66,342 64,342 L36,341 C33,341 31,339 32,337 Z"
+                fill="#ffd54a" stroke="#241f1a" stroke-width="3" />
+              <!-- hexagonal facets: straight dividing lines + subtle shading, no wavy wood grain -->
+              <rect x="28" y="68" width="16" height="268" fill="#ffffff" opacity="0.22" />
+              <rect x="58" y="68" width="16" height="268" fill="#000000" opacity="0.15" />
+              <path d="M45,68 L42,337" stroke="#241f1a" stroke-width="1.5" opacity="0.6" fill="none" />
+              <path d="M58,68 L56,337" stroke="#241f1a" stroke-width="1.5" opacity="0.6" fill="none" />
+              <path d="M32,338 L70,339 L52,376 Z" fill="#e8bf8a" stroke="#241f1a" stroke-width="3" stroke-linejoin="round" />
+              <path d="M45,362 L58,363 L51,376 Z" fill="#241f1a" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <p class="credit">Created By: Falyssa</p>
+
+    <div class="scroll-cue" aria-hidden="true">&#8595;</div>
+  </div>
+
+  <div class="descriptor-section">
+    <p class="tagline">Live spelling practice &amp; tests for the classroom &mdash; replace paper spelling tests with real-time, <strong>teacher-hosted</strong> Wordle rounds that show students their mistakes as they happen.</p>
+  </div>
+
+  <script>
+    const funkyWord = document.querySelector('.funky-word');
+    function playLetterAnimation() {
+      funkyWord.querySelectorAll('.letter-inner').forEach((el) => {
+        const isO = el.parentElement.classList.contains('fw-o');
+        el.classList.remove('animate-jump', 'animate-spin');
+        void el.offsetWidth; // force reflow so the animation restarts on repeat clicks
+        el.classList.add(isO ? 'animate-spin' : 'animate-jump');
+      });
+    }
+    funkyWord.addEventListener('click', playLetterAnimation);
+    funkyWord.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        playLetterAnimation();
+      }
+    });
+  </script>
+</body>
+</html>

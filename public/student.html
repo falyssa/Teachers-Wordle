@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher's Wordle — Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Doto:wght@400;700&family=Poppins:wght@400;500;600&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="back-link" href="index.html">&larr; Home</a>
+  <h1>Teacher's Wordle</h1>
+
+  <div class="error-banner" id="error-banner"></div>
+
+  <div class="card accent-blue" id="join-card">
+    <label for="name-input">Your name</label>
+    <input type="text" id="name-input" maxlength="30" autocomplete="off" />
+    <label for="code-input">Room code</label>
+    <input type="text" id="code-input" maxlength="4" style="text-transform:uppercase;" autocomplete="off" />
+    <button id="join-btn">Join Room</button>
+  </div>
+
+  <div id="game-area" style="display:none;">
+    <p class="prompt" id="prompt-text"></p>
+    <div id="grid"></div>
+    <div id="keyboard"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="js/student.js"></script>
+</body>
+</html>

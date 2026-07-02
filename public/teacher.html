@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher's Wordle — Teacher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Doto:wght@400;700&family=Poppins:wght@400;500;600&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="back-link" href="index.html">&larr; Home</a>
+  <h1>Teacher Dashboard</h1>
+
+  <div class="error-banner" id="error-banner"></div>
+
+  <div class="card accent-blue" id="room-card">
+    <label>Room Code — share this with your students</label>
+    <div class="room-code" id="room-code">----</div>
+    <p class="hint" id="lan-hint">Students on the same WiFi should open this app and enter the code above.</p>
+  </div>
+
+  <div class="card accent-orange" id="practice-card">
+    <label for="word-input">Practice / Live word (5 letters)</label>
+    <input type="text" id="word-input" maxlength="5" placeholder="e.g. BRAVE" autocomplete="off" />
+    <button id="set-word-btn">Start Round</button>
+    <button class="secondary" id="reveal-btn">Reveal Word to Class</button>
+  </div>
+
+  <div class="card accent-cyan" id="test-card">
+    <label for="test-words-input">Test mode — one word per line (say each aloud, students never see the text)</label>
+    <textarea id="test-words-input" placeholder="apple&#10;beach&#10;chair"></textarea>
+    <button id="start-test-btn">Start Test</button>
+    <div id="test-controls" style="display:none; margin-top:12px;">
+      <span class="hint" id="test-progress"></span>
+      <div style="margin-top:8px;">
+        <button id="advance-test-btn">Next Word</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card accent-lime" id="difficulty-card" style="display:none;">
+    <label>Word Difficulty — easiest to hardest</label>
+    <div id="difficulty-body"></div>
+  </div>
+
+  <div class="card accent-fuchsia" id="results-card" style="display:none;">
+    <label>Test Results — click a student to see their mistakes</label>
+    <div id="results-body"></div>
+  </div>
+
+  <div class="card accent-purple" id="roster-card">
+    <label>Live View (<span id="student-count">0</span> students) — click a student to see their guesses</label>
+    <ul class="roster" id="roster-list"></ul>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="js/teacher.js"></script>
+</body>
+</html>
