@@ -59,3 +59,4 @@ Teacher's Wordle running:
 - Teacher accounts and persistent classrooms (students join a standing class, not just a one-off room code)
 - Saved word lists / past test results (currently everything is in-memory and lost on server restart)
 - Optional text-to-speech word playback for test mode, as an alternative to the teacher speaking aloud
+- Feature where teacher's can adjust the word length and therefore grid size
